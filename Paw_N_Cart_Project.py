@@ -146,22 +146,22 @@ def bird_menu():
 def bird_item_add(): # func prints selected option, adds to shopping cart
     global total_items,total_cost,shopping_cart
     total_items += 1
-    total_cost += bird_menu_cost[int(bmo)]
-    shopping_cart += f"{bird_menu_list[int(bmo)-1].replace('_',' ')} \
-: {currencies[0]}{bird_menu_cost[int(bmo)]}\n"
-    print(f"\n{bird_menu_list[int(bmo)-1].replace('_',' ')} \
-: {currencies[0]}{bird_menu_cost[int(bmo)]} {add}\n")
+    total_cost += bird_menu_cost[int(bird_menu_option)]
+    shopping_cart += f"{bird_menu_list[int(bird_menu_option)-1].replace('_',' ')} \
+: {currencies[0]}{bird_menu_cost[int(bird_menu_option)]}\n"
+    print(f"\n{bird_menu_list[int(bird_menu_option)-1].replace('_',' ')} \
+: {currencies[0]}{bird_menu_cost[int(bird_menu_option)]} {add}\n")
         
 def bird_selection(): # output option changes based on user selection
-    if bmo == "1": # bmo = bird menu option
+    if bird_menu_option == "1": # bird_menu_option = bird menu option
         bird_item_add()
-    elif bmo == "2":
+    elif bird_menu_option == "2":
         bird_item_add()
-    elif bmo == "3":
+    elif bird_menu_option == "3":
         bird_item_add()
-    elif bmo == "4":
+    elif bird_menu_option == "4":
         bird_item_add()
-    elif bmo == "8":
+    elif bird_menu_option == "8":
         print(f"{shopping_cart}\nTotal Items: {total_items}\n\
 Total Cost: {currencies[0]}{total_cost}") # shopping cart
     else:
@@ -181,22 +181,22 @@ def other_pets_menu():
 def otherpet_item_add(): # func prints selected option, adds to shopping cart
     global total_items,total_cost,shopping_cart
     total_items += 1
-    total_cost += other_pet_menu_cost[int(opmo)]
-    shopping_cart += f"{other_pet_menu_list[int(opmo)-1].replace('_',' ')} \
-: {currencies[0]}{other_pet_menu_cost[int(opmo)]}\n"
-    print(f"\n{other_pet_menu_list[int(opmo)-1].replace('_',' ')} \
-: {currencies[0]}{other_pet_menu_cost[int(opmo)]} {add}\n")
+    total_cost += other_pet_menu_cost[int(other_menu_option)]
+    shopping_cart += f"{other_pet_menu_list[int(other_menu_option)-1].replace('_',' ')} \
+: {currencies[0]}{other_pet_menu_cost[int(other_menu_option)]}\n"
+    print(f"\n{other_pet_menu_list[int(other_menu_option)-1].replace('_',' ')} \
+: {currencies[0]}{other_pet_menu_cost[int(other_menu_option)]} {add}\n")
         
 def otherpet_selection(): # output option changes based on user selection
-    if opmo == "1": # opmo = other pet menu option
+    if other_menu_option == "1": # other_menu_option = other pet menu option
         otherpet_item_add()
-    elif opmo == "2":
+    elif other_menu_option == "2":
         otherpet_item_add()
-    elif opmo == "3":
+    elif other_menu_option == "3":
         otherpet_item_add()
-    elif opmo == "4":
+    elif other_menu_option == "4":
         otherpet_item_add()
-    elif opmo == "8":
+    elif other_menu_option == "8":
         print(f"{shopping_cart}\nTotal Items: {total_items}\n\
 Total Cost: {currencies[0]}{total_cost}") # shopping cart
     else:
@@ -215,22 +215,22 @@ def own_brand_menu():
 def own_item_add(): # func prints selected option, adds to shopping cart
     global total_items,total_cost,shopping_cart
     total_items += 1
-    total_cost += own_menu_cost[int(obmo)]
-    shopping_cart += f"{own_menu_list[int(obmo)-1].replace('_',' ')} \
-: {currencies[0]}{own_menu_cost[int(obmo)]}\n"
-    print(f"\n{own_menu_list[int(obmo)-1].replace('_',' ')} \
-: {currencies[0]}{own_menu_cost[int(obmo)]} {add}\n")
+    total_cost += own_menu_cost[int(own_brand_option)]
+    shopping_cart += f"{own_menu_list[int(own_brand_option)-1].replace('_',' ')} \
+: {currencies[0]}{own_menu_cost[int(own_brand_option)]}\n"
+    print(f"\n{own_menu_list[int(own_brand_option)-1].replace('_',' ')} \
+: {currencies[0]}{own_menu_cost[int(own_brand_option)]} {add}\n")
         
 def own_selection(): # output option changes based on user selection
-    if obmo == "1": # obmo = own brand menu selection
+    if own_brand_option == "1": # own_brand_option = own brand menu selection
         own_item_add()
-    elif obmo == "2":
+    elif own_brand_option == "2":
         own_item_add()
-    elif obmo == "3":
+    elif own_brand_option == "3":
         own_item_add()
-    elif obmo == "4":
+    elif own_brand_option == "4":
         own_item_add()
-    elif obmo == "8":
+    elif own_brand_option == "8":
         print(f"{shopping_cart}\nTotal Items: {total_items}\n\
 Total Cost: {currencies[0]}{total_cost}") # shopping cart
     else:
@@ -248,43 +248,26 @@ def seasonal_menu():
 def sea_item_add(): # func prints selected option, adds to shopping cart
     global total_items,total_cost,shopping_cart
     total_items += 1
-    total_cost += seamen_cost[int(seamo)]
-    shopping_cart += f"{seamen[int(seamo)-1].replace('_',' ')} \
-: {currencies[0]}{seamen_cost[int(seamo)]}\n"
-    print(f"\n{seamen[int(seamo)-1].replace('_',' ')} \
-: {currencies[0]}{seamen_cost[int(seamo)]} {add}\n")
+    total_cost += seamen_cost[int(sea_menu_option)]
+    shopping_cart += f"{seamen[int(sea_menu_option)-1].replace('_',' ')} \
+: {currencies[0]}{seamen_cost[int(sea_menu_option)]}\n"
+    print(f"\n{seamen[int(sea_menu_option)-1].replace('_',' ')} \
+: {currencies[0]}{seamen_cost[int(sea_menu_option)]} {add}\n")
         
 def seasonal_selection(): # output option changes based on user selection
-    if seamo == "1": # seamo = seasonal menu option
+    if sea_menu_option == "1": # sea_menu_option = seasonal menu option
         sea_item_add()
-    elif seamo == "2":
+    elif sea_menu_option == "2":
         sea_item_add()
-    elif seamo == "3":
+    elif sea_menu_option == "3":
         sea_item_add()
-    elif seamo == "4":
+    elif sea_menu_option == "4":
         sea_item_add()
-    elif seamo == "8":
+    elif sea_menu_option == "8":
         print(f"{shopping_cart}\nTotal Items: {total_items}\n\
 Total Cost: {currencies[0]}{total_cost}") # shopping cart
     else:
         print("Invalid Input")
-        
-# def item_selection(smo,saleenu,doglen,catlen,birlen,opelen,ownlen,sea_len):
-#     if mmo in str(enumerate(mainmen)):
-#         if smo in str(salelen):
-#             sale_item_add()
-#         elif dmo in str(doglen):
-#             dog_item_add()
-#         elif cmo in str(catlen):
-#             cat_item_add()
-#         elif bmo in str(birlen):
-#             bird_item_add()
-#         elif opmo in str(opelen):
-#             bird_item_add()
-#         elif obmo in str(ownlen):
-#             own_item_add()
-#         elif seamo in str(sea_len):
-#             sea_item_add()
 
 # checkout vars and funcs
 checkout_menu_list = "Remove_Item Add_Item Checkout"
@@ -350,12 +333,12 @@ while True:
         print("Bird Menu Selected")
         while True:
             bird_menu()
-            bmo = input("\nEnter a Number From The Bird Menu: ")
-            if bmo == "0":
+            bird_menu_option = input("\nEnter a Number From The Bird Menu: ")
+            if bird_menu_option == "0":
                 print("Session Ended\nGoodbye")
                 session_ended = True
                 break
-            elif bmo == "9":
+            elif bird_menu_option == "9":
                 print("Back To Main Menu\n");break
             bird_selection()
 # other pets menu
@@ -363,12 +346,12 @@ while True:
         print("Other Pets Menu Selected")
         while True:
             other_pets_menu()
-            opmo = input("\nEnter a Number From The Other Pets Menu: ")
-            if opmo == "0":
+            other_menu_option = input("\nEnter a Number From The Other Pets Menu: ")
+            if other_menu_option == "0":
                 print("Session Ended\nGoodbye")
                 session_ended = True
                 break
-            elif opmo == "9":
+            elif other_menu_option == "9":
                 print("Back To Main Menu\n");break
             otherpet_selection()
 # own brand menu
@@ -376,12 +359,12 @@ while True:
         print("Own Brand Menu Selected")
         while True:
             own_brand_menu()
-            obmo = input("\nEnter a Number From The Own Brand Menu: ")
-            if obmo == "0":
+            own_brand_option = input("\nEnter a Number From The Own Brand Menu: ")
+            if own_brand_option == "0":
                 print("Session Ended\nGoodbye")
                 session_ended = True
                 break
-            elif obmo == "9":
+            elif own_brand_option == "9":
                 print("Back To Main Menu\n");break
             own_selection()
 # seasonal menu
@@ -389,12 +372,12 @@ while True:
         print("Seasonal Menu Selected")
         while True:
             seasonal_menu()
-            seamo = input("\nEnter a Number From The Seasonal Menu: ")
-            if seamo == "0":
+            sea_menu_option = input("\nEnter a Number From The Seasonal Menu: ")
+            if sea_menu_option == "0":
                 print("Session Ended\nGoodbye")
                 session_ended = True
                 break
-            elif seamo == "9":
+            elif sea_menu_option == "9":
                 print("Back To Main Menu\n");break
             seasonal_selection()
 # checkout
